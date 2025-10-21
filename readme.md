@@ -10,14 +10,14 @@ bombardier -n 100000 -c 50 -p r http://127.0.0.1:3000
 
 | RELATIVE | FRAMEWORK | AVG | STDDEV | MAX |
 | :--- | :--- | :--- | :--- | :--- |
-| **100%** | [uWS](#uws) | `73858` | `3873` | `81799` |
-| **84%** | [Hyper Express](#hyper-express) | `62147` | `3612` | `68981` |
-| **33%** | [Node (Default)](#node-default) | `24208` | `7249` | `62241` |
-| **31%** | [Fastify](#fastify) | `22561` | `6661` | `36158` |
-| **28%** | [Hono](#hono) | `20993` | `5947` | `31484` |
-| **25%** | [Koa](#koa) | `18280` | `8337` | `68676` |
-| **11%** | [Carbon](#carbon) | `8262` | `1464` | `10521` |
-| **9%** | [Express](#express) | `6303` | `1064` | `8337` |
+| **100%** | [uWS](#uws) | `75446` | `3596` | `83627` |
+| **82%** | [Hyper Express](#hyper-express) | `61873` | `3537` | `66066` |
+| **34%** | [Node (Default)](#node-default) | `25885` | `8606` | `77511` |
+| **30%** | [Fastify](#fastify) | `22651` | `6814` | `34901` |
+| **28%** | [Hono](#hono) | `20991` | `6276` | `30510` |
+| **26%** | [Koa](#koa) | `19873` | `11460` | `81196` |
+| **11%** | [Carbon](#carbon) | `8065` | `1428` | `10187` |
+| **8%** | [Express](#express) | `6365` | `1088` | `8300` |
 
 
 ### In Detail
@@ -42,14 +42,14 @@ bombardier -n 100000 -c 50 -p r http://127.0.0.1:3000
 
   ```
   Statistics        Avg      Stdev        Max
-    Reqs/sec      8743.93    5822.97   67313.95
-    Latency        5.70ms     4.29ms   374.18ms
+    Reqs/sec      8684.78    6010.59   76762.73
+    Latency        5.74ms     4.46ms   389.09ms
     HTTP codes:
-      1xx - 0, 2xx - 91092, 3xx - 0, 4xx - 0, 5xx - 0
-      others - 8908
+      1xx - 0, 2xx - 91390, 3xx - 0, 4xx - 0, 5xx - 0
+      others - 8610
     Errors:
-      dial tcp 127.0.0.1:3000: connect: connection refused - 8908
-    Throughput:     1.81MB/s
+      dial tcp 127.0.0.1:3000: connect: connection refused - 8610
+    Throughput:     1.80MB/s
   ```
 
 - #### Express
@@ -68,12 +68,12 @@ bombardier -n 100000 -c 50 -p r http://127.0.0.1:3000
 
   ```
   Statistics        Avg      Stdev        Max
-    Reqs/sec      6423.76    1098.96    8397.07
-    Latency        7.78ms     3.73ms   353.57ms
+    Reqs/sec      6340.94    1061.28    8254.64
+    Latency        7.88ms     3.74ms   361.60ms
     HTTP codes:
       1xx - 0, 2xx - 100000, 3xx - 0, 4xx - 0, 5xx - 0
       others - 0
-    Throughput:     1.84MB/s
+    Throughput:     1.81MB/s
   ```
 
 - #### Fastify
@@ -96,12 +96,12 @@ bombardier -n 100000 -c 50 -p r http://127.0.0.1:3000
 
   ```
   Statistics        Avg      Stdev        Max
-    Reqs/sec     23819.52    7507.01   35560.54
-    Latency        2.10ms     2.12ms   190.32ms
+    Reqs/sec     24092.23    7527.24   35063.28
+    Latency        2.07ms     2.12ms   187.73ms
     HTTP codes:
       1xx - 0, 2xx - 100000, 3xx - 0, 4xx - 0, 5xx - 0
       others - 0
-    Throughput:     5.41MB/s
+    Throughput:     5.46MB/s
   ```
 
 - #### Hono
@@ -119,12 +119,12 @@ bombardier -n 100000 -c 50 -p r http://127.0.0.1:3000
 
   ```
   Statistics        Avg      Stdev        Max
-    Reqs/sec     21114.20    5842.34   29970.76
-    Latency        2.37ms     2.11ms   187.88ms
+    Reqs/sec     20198.46    5269.66   28704.21
+    Latency        2.47ms     2.05ms   186.40ms
     HTTP codes:
       1xx - 0, 2xx - 100000, 3xx - 0, 4xx - 0, 5xx - 0
       others - 0
-    Throughput:     4.77MB/s
+    Throughput:     4.56MB/s
   ```
 
 - #### Hyper Express
@@ -143,8 +143,8 @@ bombardier -n 100000 -c 50 -p r http://127.0.0.1:3000
 
   ```
   Statistics        Avg      Stdev        Max
-    Reqs/sec     61907.81    3739.63   69048.40
-    Latency      805.21us    77.29us     2.94ms
+    Reqs/sec     61972.26    4672.85   64660.84
+    Latency      804.68us   104.02us     3.52ms
     HTTP codes:
       1xx - 0, 2xx - 100000, 3xx - 0, 4xx - 0, 5xx - 0
       others - 0
@@ -167,14 +167,14 @@ bombardier -n 100000 -c 50 -p r http://127.0.0.1:3000
 
   ```
   Statistics        Avg      Stdev        Max
-    Reqs/sec     18047.70    7538.73   68007.67
-    Latency        2.76ms     2.47ms   220.69ms
+    Reqs/sec     18891.62    7755.48   64324.48
+    Latency        2.64ms     2.43ms   212.06ms
     HTTP codes:
-      1xx - 0, 2xx - 93112, 3xx - 0, 4xx - 0, 5xx - 0
-      others - 6888
+      1xx - 0, 2xx - 93083, 3xx - 0, 4xx - 0, 5xx - 0
+      others - 6917
     Errors:
-      dial tcp 127.0.0.1:3000: connect: connection refused - 6888
-    Throughput:     3.80MB/s
+      dial tcp 127.0.0.1:3000: connect: connection refused - 6917
+    Throughput:     3.98MB/s
   ```
 
 - #### Node (Default)
@@ -197,14 +197,14 @@ bombardier -n 100000 -c 50 -p r http://127.0.0.1:3000
 
   ```
   Statistics        Avg      Stdev        Max
-    Reqs/sec     24519.37    7213.13   72325.61
-    Latency        2.03ms     2.00ms   171.21ms
+    Reqs/sec     25233.60    8181.96   63644.17
+    Latency        1.98ms     1.98ms   171.22ms
     HTTP codes:
-      1xx - 0, 2xx - 96487, 3xx - 0, 4xx - 0, 5xx - 0
-      others - 3513
+      1xx - 0, 2xx - 97528, 3xx - 0, 4xx - 0, 5xx - 0
+      others - 2472
     Errors:
-      dial tcp 127.0.0.1:3000: connect: connection refused - 3513
-    Throughput:     5.42MB/s
+      dial tcp 127.0.0.1:3000: connect: connection refused - 2472
+    Throughput:     5.63MB/s
   ```
 
 - #### uWS
@@ -223,14 +223,14 @@ bombardier -n 100000 -c 50 -p r http://127.0.0.1:3000
 
   ```
   Statistics        Avg      Stdev        Max
-    Reqs/sec     74168.81    3338.07   85714.86
-    Latency      671.78us   253.42us    14.70ms
+    Reqs/sec     74821.04    3138.11   94568.43
+    Latency      667.72us   198.19us     9.91ms
     HTTP codes:
-      1xx - 0, 2xx - 96534, 3xx - 0, 4xx - 0, 5xx - 0
-      others - 3466
+      1xx - 0, 2xx - 96332, 3xx - 0, 4xx - 0, 5xx - 0
+      others - 3668
     Errors:
-      dial tcp 127.0.0.1:3000: connect: connection refused - 3466
-    Throughput:    11.33MB/s
+      dial tcp 127.0.0.1:3000: connect: connection refused - 3668
+    Throughput:    11.36MB/s
   ```
 
 
